@@ -57,6 +57,10 @@ int strStr(string &source, string &target) {
 int main() {
     string source = "tartarget";
     string target = "target";
+
+    string source_1 ="";
+    string target_1 ="";
+
     std::cout << strStr(source, target) << std::endl;
     return 0;
 }
