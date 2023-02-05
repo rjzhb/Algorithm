@@ -9,6 +9,7 @@ int strStr(string &source, string &target) {
         return 0;
     }
 
+    //find the first letter of target
     int start = 0;
     for (start = 0; start < source.size(); start++) {
         if (source[start] == target[0])break;
@@ -18,6 +19,7 @@ int strStr(string &source, string &target) {
         return -1;
     }
 
+    //calculate sum_diff from source and target by using left and right pointers.
     int left = start;
     int right = 0;
 
@@ -29,12 +31,14 @@ int strStr(string &source, string &target) {
         equal_flag &= source[left++] == target[right++];
     }
 
+    //judge if corresponding to our need.
     if (right < target.size()) {
         return -1;
     } else if (equal_flag) {
         return start;
     }
 
+    //if it doesn't meet our need, we should use a window to find the first position.
     //再来双指针，相当于一个窗口
     int sub_start = 0;
     for (sub_start = start; left < source.size(); left++) {
