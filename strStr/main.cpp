@@ -3,7 +3,7 @@
 #include <cstring>
 
 using namespace std;
-
+//lintcode 13题
 int strStr(string &source, string &target) {
     if (target.size() == 0) {
         return 0;
