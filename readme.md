@@ -1,1 +1,1 @@
-记录平时算法
+record some algorithms
